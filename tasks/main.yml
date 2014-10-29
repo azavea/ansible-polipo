@@ -1,0 +1,11 @@
+---
+- name: Install Polipo
+  apt: pkg=polipo={{ polipo_version }} state=present
+
+- name: Configure Polipo
+  template: src={{ item }}.j2 dest=/etc/polipo/{{ item }}
+  with_items:
+    - config
+    - options
+  notify:
+    - Restart Polipo
