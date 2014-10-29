@@ -1,0 +1,6 @@
+---
+polipo_version: "1.0.4.1-6"
+polipo_proxy_address: "127.0.0.1"
+polipo_disable_indexing: "true"
+polipo_disable_servers_list: "true"
+polipo_allowed_clients: "127.0.0.1/32"

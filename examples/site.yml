@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  vars:
+    polipo_proxy_address: "0.0.0.0"
+    polipo_disable_indexing: "false"
+    polipo_disable_servers_list: "false"
+    polipo_allowed_clients: "0.0.0.0/0"
+
+  roles:
+    - { role: "azavea.polipo" }
