@@ -1,8 +1,10 @@
 ---
 - name: Install Polipo
+  sudo: yes
   apt: pkg=polipo={{ polipo_version }} state=present
 
 - name: Configure Polipo
+  sudo: yes
   template: src={{ item }}.j2 dest=/etc/polipo/{{ item }}
   with_items:
     - config
